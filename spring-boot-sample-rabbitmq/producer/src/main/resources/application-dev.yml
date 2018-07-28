@@ -1,0 +1,13 @@
+spring:
+  rabbitmq:
+    addresses: localhost
+    username: guest
+    password: guest
+  cloud:
+    stream:
+        bindings:
+          cmdProducerToConsumer:
+            binder: rabbit
+            content-type: application/x-java-serialized-object
+            destination: command.producer.consumer
+            
