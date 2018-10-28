@@ -10,4 +10,4 @@ spring:
             binder: rabbit
             content-type: application/x-java-serialized-object
             destination: command.producer.consumer
-            
+            group: consumers
