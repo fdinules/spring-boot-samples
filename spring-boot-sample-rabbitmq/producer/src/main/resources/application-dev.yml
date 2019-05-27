@@ -8,6 +8,6 @@ spring:
         bindings:
           cmdProducerToConsumer:
             binder: rabbit
-            content-type: application/x-java-serialized-object
+            content-type: application/json
             destination: command.producer.consumer
             

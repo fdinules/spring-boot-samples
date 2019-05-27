@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.message.library.SpecificCommand;
+import com.example.producer.model.CommandMessage;
 import com.example.producer.service.CommandSenderService;
 
 @RestController
@@ -14,7 +14,7 @@ public class MyController {
 	private CommandSenderService commandSenderService;
 
 	@PostMapping("/send")
-	public void send(@RequestBody SpecificCommand cmd) {
+	public void send(@RequestBody CommandMessage cmd) {
 		commandSenderService.sendCommand(cmd);
 	}
 }
